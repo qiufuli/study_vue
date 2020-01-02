@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(item,index) in list" :class="{active:isActive==index}" @click="tag(index)">{{item}}</li>
+    </ul>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        list:['电影1','电影2','电影3','电影4','电影5'],
+        isActive:'0'
+      },
+      methods:{
+        tag(index){
+          this.isActive = index;
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

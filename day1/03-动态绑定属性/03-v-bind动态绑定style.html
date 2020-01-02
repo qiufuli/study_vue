@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 对象语法 -->
+
+
+    <!-- <h2 :style="{属性名：属性值,属性名：属性值}">{{message}}</h2> -->
+    <h2 :style="{fontSize:'30px',color:finalColor}">{{message}}</h2>
+
+
+      <!-- 数组语法 -->
+      <h2 class="title" :style="[{fontSize:'30px',color:finalColor}]">{{message}}</h2>
+
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world',
+        finalColor:'red'
+      },
+      methods:{
+        getClasses(){
+          return {active:this.isActive,line:this.isLine}
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

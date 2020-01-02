@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 对象语法 -->
+
+
+      <h2 :class="active">{{message}}</h2>
+      <!-- <h2 :class="{类名：boolean,类名：boolean}">{{message}}</h2> -->
+      <h2 :class="{active:true,line:true}">{{message}}</h2>
+      <h2 class="title" :class="{active:isActive,line:isLine}">{{message}}</h2>
+      <!-- 可以用methods或者 computed -->
+      <h2 class="title" :class="getClasses()">{{message}}</h2>
+
+
+      <!-- 数组语法 -->
+      <h2 class="title" :class="[{'active':false},'line',test]">{{message}}</h2>
+
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world',
+        active:'active',
+        isActive:true,
+        isLine:true,
+        test:'test'
+      },
+      methods:{
+        getClasses(){
+          return {active:this.isActive,line:this.isLine}
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
