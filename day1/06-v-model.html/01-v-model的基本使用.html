@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- input -->
+    <input type="text" v-model="message">
+    <p>{{message}}</p>
+    <br>
+    <!-- 1.修饰符 lazy blur或者enter时候触发 -->
+    <input type="text" v-model.lazy="message">
+    <p>{{message}}</p>
+
+
+    <!-- 2.修饰符 number  v-model默认类型是string 即使输入的是数字 也是string
+      number 就可以让类型始终未number 后期也不转换了
+    -->
+    <input type="number" v-model.number="age">
+    <p>{{age}}----{{typeof age}}</p>
+
+    <!-- 3.修饰符 trim 去除两边的空格-->
+    <input type="text" v-model.trim="name">
+    <p>{{name}}</p>
+
+    <!-- ######################## -->
+    <!-- radio  如果写了v-model  name可以省略 -->
+    <input type="radio" id="man" name="sex" value="男" v-model="sex">
+    <input type="radio" id="woman" name="sex" value="女" v-model="sex">
+    <p>{{sex}}</p>
+    <br>
+
+    <!-- ######################## -->
+    <!-- checkbox单选框 -->
+    <label for="agree">
+      <input type="checkbox" id="agree" v-model="isAgree">同意协议
+    </label>
+    <p>{{isAgree}}</p>
+    <br>
+    <!-- checkbox多选框 每一个的value值都会push/pop到数组中-->
+    <input type="checkbox" v-model="hobbies" value="1">篮球1
+    <input type="checkbox" v-model="hobbies" value="2">篮球2
+    <input type="checkbox" v-model="hobbies" value="3">篮球3
+    <p>{{hobbies}}</p>
+    <br>
+    <!-- ######################## -->
+    <!-- select 单选 -->
+    <select name="abc" v-model="fruit">
+      <option value="">请选择</option>
+      <option value="a">苹果</option>
+      <option value="b">香蕉</option>
+      <option value="c">梨</option>
+    </select>
+    <p>{{fruit}}</p>
+    <!-- select 多选 -->
+    <select name="abc" v-model="fruits" multiple>
+      <option value="">请选择</option>
+      <option value="a">苹果</option>
+      <option value="b">香蕉</option>
+      <option value="c">梨</option>
+    </select>
+    <p>{{fruits}}</p>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world',//input
+        age: 23,
+        name:'',
+        sex: '男', //单选框
+        isAgree: false, //复选框单选
+        hobbies: [], //复选框多选
+        fruit: '',//select 单选
+        fruits: []//select 多选
+      }
+    })
+  </script>
+</body>
+
+</html>
