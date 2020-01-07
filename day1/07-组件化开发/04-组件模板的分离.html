@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <cpn></cpn>
+  </div>
+  <!-- 1.script标签的形式 -->
+  <!-- <script type="text/x-template" id="cpn1">
+    <div>
+      <h2>我是标题</h2>
+      <p>sadasd</p>
+      <p>qweqweqwe</p>
+    </div>
+  </script> -->
+  <!-- 2.template标签的形式 -->
+  <template id="cpn1">
+    <div>
+      <h2>我是标题1</h2>
+      <p>sadasd</p>
+      <p>qweqweqwe</p>
+    </div>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    //1.创建组件构造器对象
+
+    const cpnC = Vue.extend({
+      template: '#cpn1'
+    })
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world'
+      },
+      components: {
+        cpn: cpnC
+      }
+    })
+  </script>
+</body>
+
+</html>

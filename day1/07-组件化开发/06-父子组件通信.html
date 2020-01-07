@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 如果不动态绑定属性 那么传过去的就是一个字符串''movies' -->
+    <cpn :cmovies='movies' ></cpn>
+  </div>
+  <template id="cpn">
+    <div>
+      <p>{{cmovies}}</p>
+    </div>
+  </template>
+  <script src="../js/vue.js"></script>
+  <script>
+    const cpn= {
+      template:'#cpn',
+      data(){
+        return {}
+      },
+      // props:['cmovies'] 数组形式
+      props:{
+        cmovies:{
+          type:Array,
+          default:['aa'],
+          required:true
+        },
+        // 类型为对象的时候，默认值必须是一个函数 (否则2.5.2以上会报错)
+        cmes:{
+          type:Array,
+          default:function(){
+            return []
+          }
+        }
+      }
+    }
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world',
+        movies:['11','22','333']
+      },
+      components:{
+        cpn
+      }
+    })
+  </script>
+</body>
+
+</html>
