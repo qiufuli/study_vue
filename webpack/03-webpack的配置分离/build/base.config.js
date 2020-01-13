@@ -6,7 +6,7 @@ const uglifyWebpackPlugin = require('uglifyjs-webpack-plugin'); //压缩js
 module.exports = {
   entry:'./src/main.js',
   output:{
-    path:path.resolve(__dirname,'dist'),
+    path:path.resolve(__dirname,'../dist'),
     filename:'bundle.js',
     // 任何涉及到url的都会加上publicPath
     publicPath:'dist/'
@@ -54,14 +54,5 @@ module.exports = {
   },
   plugins:[
     new webpack.BannerPlugin('最终版权归qiufuli所有') , //js压缩后就没有了
-
-    // new htmlWebpackPlugin({
-    //   template:'index.html'
-    // }),
-    // new uglifyWebpackPlugin()
   ],
-  devServer:{
-    contentBase:'./dist',//服务的文件夹
-    inline:true,//实时监听
-  }
 }
