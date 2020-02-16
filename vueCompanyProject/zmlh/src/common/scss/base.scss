@@ -1,0 +1,266 @@
+@import './variable.scss';
+body {
+  background-color: $color-bg;
+  font-size: $font-size-base;
+  color: $color-text-primary;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+}
+
+input {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+
+.btn {
+  text-align: center;
+  // width: 100%;
+  box-sizing: border-box;
+  border-radius: $radius-base;
+  border: 1px solid transparent;
+  box-shadow: 0 0 1px transparent;
+  padding: 36px 36px;
+  line-height: 1;
+  font-size: $font-size-large;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: $color-base;
+  color: $color-white;
+  background-color: $color-base;
+}
+
+.btn-light {
+  background-color: $color-white;
+  color: $color-base;
+  border-color: $color-base;
+}
+.btn-gray {
+  background-color: $color-btn-content;
+  border-color: $color-border;
+  color: $color-text-label;
+}
+.btn-danger {
+  background-color: $color-error;
+  color: #fff;
+  border-color: $color-error;
+}
+
+
+.btn-primary[disabled="disabled"] {
+  opacity: 0.5;
+}
+
+.btn-round {
+  background-color: $color-white;
+  color: $color-base;
+  border-color: $color-base;
+  border-radius: 148px;
+}
+
+.btn-small {
+  font-size: $font-size-base;
+  padding: 24px;
+}
+
+// input checkbox
+.input-switch {
+  position: relative;
+  width: 164px;
+  height: 84px;
+  border: 1px solid $color-border;
+  outline: 0;
+  border-radius: 42px;
+  appearance: none;
+  transition: background-color 0.1s, border 0.1s;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.input-switch:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: $color-border;
+  transition: transform .35s cubic-bezier(0.45, 1, 0.4, 1);
+}
+
+.input-switch:checked::before {
+  transform: scale(0)
+}
+
+.input-switch:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: $color-border;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+}
+
+.input-switch:checked::after {
+  transform: translateX(80px);
+}
+
+.input-switch:checked {
+  border-color: $color-success;
+  background-color: $color-success;
+}
+
+// 组件 transition 动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+  display: block;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  display: none;
+}
+
+// input wrap 内容
+.border-b{
+  border-bottom: $border;
+}
+.form-group {
+  display: flex;
+  // min-height: 150px;
+  // padding: 64px $padding-base*2 64px $padding-base;
+  // align-items: center;
+  // background-color: #fff;
+  .input-label {
+    // line-height: 150px;
+    flex: 1 1 35%;
+    font-size: $font-size-large;
+    color: $color-text-title;
+    padding: 64px 0;
+  }
+
+}
+input,select,textarea{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 64px 70px 64px 0;
+  font-size: $font-size-base;
+  line-height: 1;
+  color: $color-text-primary;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  appearance: none;
+}
+.form-control-wrap {
+  width: 100%;
+  position: relative;
+}
+input:disabled,
+input[disabled] {
+  opacity: 1;
+  // -webkit-text-fill-color: $color-text-title;
+  // color: $color-text-title;
+}
+
+.form-control-wrap:after {
+  content: ' ';
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  border-width: 2px 2px 0 0;
+  border-color: $color-text-primary;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 40%;
+  right: 48px;
+  margin-top: -4px;
+}
+
+select {
+  appearance: none;
+}
+
+// banklist 银行列表
+.banklist-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.banklist {
+  width: 100%;
+  height: 100%;
+}
+
+.banklist .title {
+  font-size: $font-size-base;
+  background-color: $color-bg;
+  color: $color-text-label;
+  line-height: 1;
+  padding: $padding-base;
+}
+
+.banklist .bank {
+  display: flex;
+  line-height: 1;
+  border-bottom: 1px solid $color-border;
+}
+
+.bank .bank-img {
+  flex: 1 1 45%;
+  padding: 45px 48px;
+  background-position: 48px 36px;
+  background-repeat: no-repeat;
+  background-size: auto 72px;
+}
+
+.bank .bank-text {
+  text-align: right;
+  padding: 45px 48px;
+  flex: 1 1 55%;
+  font-size: $font-size-base;
+  color: $color-text-title;
+}
+
+.msg {
+  background-color: $color-text-title;
+}
+
+::-webkit-scrollbar {
+  display: none
+}
+
+
+@keyframes cover-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes content-zoom {
+  0% {
+    transform: scale(0)
+  }
+  50% {
+    transform: scale(1.1)
+  }
+  100% {
+    transform: scale(1)
+  }
+}

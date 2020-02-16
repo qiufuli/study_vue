@@ -1,0 +1,36 @@
+@import './variable.scss';
+
+body {
+  background-color: $color-background;
+  line-height: 1;
+  user-select: none;
+  tap-highlight-color: transparent;
+  color: $color-text;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+}
+
+input {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+
+.base-container {
+  position: fixed;
+  width: 100%;
+  top: 88px;
+  bottom: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    // deg 角度单位 360deg
+    // rad 弧度单位 3.1415926rad * 2
+    transform: rotate(3.1415926rad * 2);
+  }
+}
+

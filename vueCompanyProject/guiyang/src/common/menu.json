@@ -1,0 +1,516 @@
+[
+	{
+		"name": "首页",
+		"icon": "icon-house",
+		"url": "/index",
+		"id": "0000000001",
+		"hasChild": false
+	},
+	{
+		"name": "审批管理",
+		"icon": "icon-examine01",
+		"url": "/approval",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "单位审批",
+				"url": "/approval/company",
+				"id": "0000000006",
+				"hasChild": false
+			},{
+				"name": "单位复审",
+				"url": "/approval/comReview",
+				"id": "0000000169",
+				"hasChild": false
+			},
+			{
+				"name": "职位审批",
+				"url": "/approval/job",
+				"id": "0000000009",
+				"hasChild": false
+			},{
+				"name": "职位复审",
+				"url": "/approval/jobReview",
+				"id": "0000000171",
+				"hasChild": false
+			},
+			{
+				"name": "域名审批",
+				"url": "/approval/domain",
+				"id": "0000000012",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "客户管理",
+		"icon": "icon-people01",
+		"url": "/customer",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "个人客户管理",
+				"url": "/customer/personal",
+				"id": "0000000016",
+				"hasChild": false
+			},
+			{
+				"name": "单位客户管理",
+				"url": "/customer/company",
+				"id": "0000000022",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "业务管理",
+		"icon": "icon-business",
+		"url": "/business",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "招聘办理",
+				"url": "/business/recruit",
+				"id": "0000000034",
+				"hasChild": false
+			},
+			{
+				"name": "收银办理",
+				"url": "/business/cashier",
+				"id": "0000000048",
+				"hasChild": false
+			},
+			{
+				"name": "现场招聘海报打印",
+				"url": "/business/xianchang",
+				"id": "0000000052",
+				"hasChild": false
+			},
+			{
+				"name": "委托招聘海报打印",
+				"url": "/business/weituo",
+				"id": "0000000060",
+				"hasChild": false
+			},
+			{
+				"name": "现场招聘签到",
+				"url": "/business/checkin",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "招聘会管理",
+		"icon": "icon-people",
+		"url": "/recruit",
+		"id": "0000000068",
+		"hasChild": false
+	},
+	{
+		"name": "招聘推广",
+		"icon": "icon-tuiguang",
+		"url": "/recruitSpread",
+		"id": "0000000071",
+		"hasChild": true,
+		"children":[
+			{
+				"name": "热门行业",
+				"url": "/recruitSpread/businessType",
+				"hasChild": false
+			},
+			{
+				"name": "热门企业",
+				"url": "/recruitSpread/keyBusiness",
+				"hasChild": false
+			},
+			{
+				"name": "重点企业",
+				"url": "/recruitSpread/keyCompany",
+				"hasChild": false
+			},
+			{
+				"name": "急需岗位",
+				"url": "/recruitSpread/urgentJob",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "职业培训",
+		"icon": "icon-peixun",
+		"url": "/jobTraining",
+		"id": "0000000058",
+		"hasChild": true,
+		"children":[
+			{
+				"name": "培训方向",
+				"url": "/jobTraining/trainingDirection",
+				"hasChild": false
+			},
+			{
+				"name": "意向统计",
+				"url": "/jobTraining/intentionCount",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "应答机器人",
+		"icon": "icon-robot",
+		"url": "/responseRobot",
+		"id": "0000000069",
+		"hasChild": true,
+		"children":[
+			{
+				"name": "类型维护",
+				"url": "/responseRobot/typeManage",
+				"hasChild": false
+			},
+			{
+				"name": "问题维护",
+				"url": "/responseRobot/questionManage",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "资讯",
+		"icon": "icon-zixun",
+		"url": "/inform",
+		"id": "0000000084",
+		"hasChild": true,
+		"children":[
+			{
+				"name": "类型维护",
+				"url": "/inform/informTypeManage",
+				"hasChild": false
+			},
+			{
+				"name": "资讯维护",
+				"url": "/inform/informManage",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "新闻管理",
+		"icon": "icon-news",
+		"url": "/news",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "新闻类型管理",
+				"url": "/news/type",
+				"hasChild": false
+			},
+			{
+				"name": "新闻管理",
+				"url": "/news/list",
+				"id": "0000000077",
+				"hasChild": false
+			},
+			{
+				"name": "新闻同步",
+				"url": "/news/sync",
+				"id": "0000000077",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "考试管理",
+		"icon": "icon-exam",
+		"url": "/exam",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "考试管理",
+				"url": "/exam/examPost",
+				"id": "0000000093",
+				"hasChild": false
+			},
+			{
+				"name": "考场管理",
+				"url": "",
+				"hasChild": true,
+				"children": [
+					{
+						"name": "考点/考场设置",
+						"url": "/exam/examRoom",
+						"id": "0000000141",
+						"hasChild": false
+					},
+					{
+						"name": "考生分配",
+						"url": "/exam/examinee",
+						"id": "0000000142",
+						"hasChild": false
+					}
+				]
+			},
+			{
+				"name": "报名管理",
+				"url": "/exam/enrol",
+				"id": "0000000094",
+				"hasChild": false
+			},
+			{
+				"name": "成绩管理",
+				"url": "/exam/grade",
+				"id": "0000000152",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "广告管理",
+		"icon": "icon-ad",
+		"url": "/ad",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "待处理广告",
+				"url": "/ad/ready",
+				"hasChild": false
+			},
+			{
+				"name": "广告管理",
+				"url": "/ad/finished",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "系统管理",
+		"icon": "icon-system",
+		"url": "/system",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "操作日志",
+				"url": "/system/log",
+				"hasChild": false
+			},
+			{
+				"name": "友情链接",
+				"url": "/system/friendlink",
+				"hasChild": false
+			},
+			{
+				"name": "系统参数",
+				"url": "/system/params",
+				"hasChild": false
+			},
+			{
+				"name": "热门职位",
+				"url": "/system/hotjob",
+				"hasChild": false
+			},
+			{
+				"name": "最低工资标准",
+				"url": "/system/salary",
+				"hasChild": false
+			},
+			{
+				"name": "人才数据维护",
+				"url": "/system/person",
+				"hasChild": false
+			},
+			{
+				"name": "通知公告",
+				"url": "/system/announce",
+				"hasChild": false
+			},
+			{
+				"name": "职位审批拒绝原因",
+				"url": "/system/jobapprove",
+				"hasChild": false
+			},
+			{
+				"name": "单位审批拒绝原因",
+				"url": "/system/comapprove",
+				"hasChild": false
+			},
+			{
+				"name": "单位录入记录",
+				"url": "/system/comRecord",
+				"hasChild": false
+			},
+			{
+				"name": "单位审核记录",
+				"url": "/system/comAppRecord",
+				"hasChild": false
+			},
+			{
+				"name": "职位录入记录",
+				"url": "/system/jobRecord",
+				"hasChild": false
+			},
+			{
+				"name": "职位审核记录",
+				"url": "/system/jobAppRecord",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "人事代理党委",
+		"icon": "icon-party",
+		"url": "/party",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "党员信息",
+				"url": "/party/partyer",
+				"id": "0000000107",
+				"hasChild": false
+			},
+			{
+				"name": "思想汇报",
+				"url": "/party/thoughtReport",
+				"hasChild": false
+			},
+			{
+				"name": "思想汇报类别",
+				"url": "/party/thoughtType",
+				"hasChild": false
+			},
+			{
+				"name": "党员信箱",
+				"url": "/party/mailBox",
+				"hasChild": false
+			},
+			{
+				"name": "党组织维护",
+				"url": "/party/orgnaize",
+				"hasChild": false
+			},
+			{
+				"name": "活动管理",
+				"url": "/party/activeManage",
+				"id": "0000000153",
+				"hasChild": false
+			},
+			{
+				"name": "党组织关系证明",
+				"url": "/party/relation",
+				"id": "0000000154",
+				"hasChild": false
+			},
+			{
+				"name": "证明记录查询",
+				"url": "/party/relationRecord",
+				"id": "0000000155",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "流动人员档案",
+		"icon": "icon-record",
+		"url": "/dangan",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "单位存档",
+				"url": "/dangan/company",
+				"hasChild": false
+			},
+			{
+				"name": "个人档案",
+				"url": "/dangan/person",
+				"id": "0000000120",
+				"hasChild": false
+			},
+			{
+				"name": "个人户籍",
+				"url": "/dangan/huji",
+				"hasChild": false
+			},
+			{
+				"name": "调档函服务",
+				"url": "/dangan/lette",
+				"id": "0000000159",
+				"hasChild": false
+			},
+			{
+				"name": "托管证明服务",
+				"id": "0000000160",
+				"url": "/dangan/service",
+				"hasChild": false
+			},
+			{
+				"name": "政审证明服务",
+				"id": "0000000161",
+				"url": "/dangan/poliExamService",
+				"hasChild": false
+			},
+			{
+				"name": "其他证明服务",
+				"id": "0000000162",
+				"url": "/dangan/otherService",
+				"hasChild": false
+			},
+			{
+				"name": "证明记录查询",
+				"id": "0000000164",
+				"url": "/dangan/serviceRecord",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "大学生就业",
+		"icon": "icon-college",
+		"url": "/college",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "见习基地（单位）管理",
+				"url": "/college/base",
+				"hasChild": false
+			},
+			{
+				"name": "见习生管理",
+				"url": "/college/people",
+				"hasChild": false
+			},
+			{
+				"name": "见习生派遣管理",
+				"url": "/college/manage",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "人才派遣",
+		"icon": "icon-patch",
+		"url": "/patch",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "我的客户",
+				"url": "/patch/myClients",
+				"hasChild": false
+			}
+		]
+	},{
+		"name": "人才库",
+		"icon": "icon-zhaorencai",
+		"url": "/talentPool",
+		"hasChild": true,
+		"children": [
+			{
+				"name": "绿卡查询",
+				"url": "/talentPool/greenCard",
+				"hasChild": false
+			}
+		]
+	},
+	{
+		"name": "统计分析",
+		"icon": "icon-statistics",
+		"url": "/statistic",
+		"hasChild": false
+	}
+]

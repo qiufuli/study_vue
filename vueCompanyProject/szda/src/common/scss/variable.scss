@@ -1,0 +1,38 @@
+
+// 颜色定义规范
+$color-background: #E9EFF6;//背景色
+$color-background-d: #fff;
+$color-background-sidebar: #263B54;
+$color-highlight-background: #000; //选中侧边栏颜色
+$color-dialog-background: #666;
+$color-theme: #ffe22d;
+$color-theme-d: rgba(255, 205, 49, 0.4);
+$color-sub-theme: #d93f30;
+$color-text-title: #1488F5;
+$color-text-left: #666;
+$color-text: #333;
+$color-text-ll: #fff;
+/*! autoprefixer: off */
+$color-btn-background:-webkit-linear-gradient(left, #0081E6, #39B5FD); //按钮
+/* autoprefixer: on */
+// 定义背景色 opacity 值
+
+$color-theme-8: rgba(255, 226, 45, 0.8);
+
+
+//字体定义规范
+$font-size-small-s: 10px;
+$font-size-small: 12px;
+$font-size-medium: 14px;
+$font-size-medium-x: 16px;
+$font-size-large: 18px;
+$font-size-large-x: 22px;
+
+
+// 定义过度动画
+$transition: all ease-in-out .2s;
+
+.xgmm .inputs input {
+    border: none;
+    background: #ccc !important;
+  }

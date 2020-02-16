@@ -1,0 +1,342 @@
+@import './variable.scss';
+
+body {
+  background-color: $color-background;
+  line-height: 1;
+  user-select: none;
+  tap-highlight-color: transparent;
+  color: $color-text;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+}
+
+input {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.base-container {
+  position: fixed;
+  width: 100%;
+  top: 88px;
+  bottom: 0;
+}
+.main {
+  width: 100%;
+   height: calc(100% - 68px) !important;
+  position: relative;
+}
+.main > div {
+  height: 100%;
+  width: 100%;
+}
+.left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 220px;
+  height: 100%;
+  // overflow: hidden;
+  // overflow-y: auto;
+  background-color: #263b54;
+  background-image: url(../../assets/images/left_menu_bg.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+.left_menu {
+  width: 100%;
+  margin: 20px 0;
+}
+.left_menu .iconfont {
+  margin-right: 5px;
+  font-size: 14px;
+}
+.left_menu li p {
+  width: 100%;
+  color: #fff;
+  padding: 12px 0 12px 19px;
+  box-sizing: border-box;
+}
+.left_menu li p {
+  width: 100%;
+}
+.left_menu li.on p,
+.left_menu li p:hover
+ {
+  background: #000;
+  color: #38B5FD;
+}
+.left_menu li.level_02 {
+  font-size: 12px;
+}
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding-left: 220px;
+  box-sizing: border-box;
+  // background: #fff;
+}
+.left_menu .iconfont.icon_lit {
+  font-size: 10px;
+}
+.left .left_menu_tree {
+  background: none;
+  color: #fff;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    // deg 角度单位 360deg
+    // rad 弧度单位 3.1415926rad * 2
+    transform: rotate(3.1415926rad * 2);
+  }
+  
+}
+// 公共样式
+.base_input{
+  display: inline-block;
+}
+.base-input  {
+  width: 180px;
+  height: 33px;
+  -webkit-appearance: none;
+  background-color: #FFF;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  line-height: 33px;
+  outline: 0;
+  padding: 0 15px;
+  -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+}
+// .el-input{
+//   width: 50% !important;
+// }
+.base_input {
+  border: none;
+}
+.base-content {
+  padding: 10px 10px;
+}
+.base-form-item {
+  display: inline-block;
+}
+.base-content_public{
+  background-color: #fff;
+  
+}
+.base_content_public_tit{
+  height: 48px;
+  margin: 0 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E5E5E5;
+  line-height: 48px;
+}
+// 字体图标公共组件中的样式{
+  .base-icon_parent{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    background-color: #0F89F3;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 2px;
+    .base-content-icon {
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+  .base_weight{
+    font-weight: bold;
+  }
+  // input回显没有边框
+.base_input_view {
+  border: none;
+  // width: 180px;
+  width: 146px;
+  height: 33px;
+  display: inline-block;
+  overflow:hidden; 
+}
+.base_btn{
+  width: 116px;
+  height: 32px;
+  // border: none;
+  // background: -webkit-linear-gradient(left, #0081e6, #39b5fd);
+  // color: #fff;
+  // border-radius: 4px;
+  // cursor: pointer;
+}
+.change_btn{
+  background: -webkit-linear-gradient(left, #0081e6, #39b5fd) !important;
+}
+.el-tree-node:hover {
+  background-color: #000 !important;
+}
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+  background-color: #000;
+}
+.el-tree-node__content {
+  height: 40px !important;
+  line-height: 40px !important;
+  background-color: #263b54;
+}
+.el-tree-node__content:hover {
+  background-color: #000 !important;
+}
+
+.el-tree-node:focus>.el-tree-node__content{
+  background:transparent !important;
+}
+.el-tree-node.is-current .el-tree-node__content {
+   background:#1d1d1d !important;
+}
+.waiceng {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  .treeTitle {
+    // width: 114px !important;
+    width: 155px !important;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .icon_two {
+      font-size: 14px;
+      margin: 0 10px;
+    }
+  }
+}
+.hasCz .treeTitle {
+  width: 114px !important;
+}
+.caozuo {
+  width: 97px;
+  height: 120px;
+  position: absolute;
+  right: -90px;
+  top: 0;
+  .commons {
+    float: left;
+    width: 97px;
+    height: 40px;
+    background-color: #1459A7;
+    color: #fff;
+    margin-left: 0 !important;
+  }
+  .commons:hover { 
+    background-color: #0F89F3;
+  }
+}
+.treeMore {
+  float: right;
+  margin-right: 20px;
+}
+.base-content_personMes{
+  .el-col{
+    height: auto !important;
+  }
+  .el-form-item{
+     margin-bottom:10px !important;
+  }
+  .el-row{
+    padding:0 !important;
+  }
+  .el-form-item__label{
+    line-height: 29px !important;
+  }
+  .el-form-item__content{
+    line-height: 26px !important
+  }
+  .base_input_view{
+    height: 26px !important;
+  }
+}
+// 登录
+.login1 {
+  .el-form-item{
+    border-bottom: 1px solid #38B5FD;
+  }
+  .el-form-item__label{
+    font-size: 16px;
+    color: #0276C7;
+    font-weight: bold;
+    text-align: right;
+  }
+  .el-input{
+    .el-input__inner {
+      border: none;
+    }
+  }
+  .el-form-item__error{
+    left: 7%;
+  }
+  .pass {
+    .el-form-item__label{
+
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #606266  !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    
+    }
+}
+// 档案管理
+.daSearch, .datj {
+  .el-tree-node__content>.el-tree-node__expand-icon{
+    padding: 0;
+  }
+  .el-tree-node__expand-icon{
+    font-size: 22px;
+  }
+}
+.el-tree{
+  background: none;
+}
+#iconPad {
+  padding-right: 30px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 系统维护
+.xtwh {
+  .el-tree-node__content>.el-tree-node__expand-icon{
+    padding: 0;
+  }
+  .el-tree-node__expand-icon{
+    font-size: 22px;
+  }
+}
+.el-dropdown-menu {
+  top: 45px !important;
+}
+#app .el-table .caret-wrapper{
+  position: absolute;
+  top:-4px;
+}
